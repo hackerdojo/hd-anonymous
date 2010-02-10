@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Hacker Dojo Anonymous Tips</title>
+    <link href="/static/style.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <img src="/static/dojo_icon.png" style="float: left; " />
+        <h1>Hacker Dojo</h1>
+        <h2>Anonymous Tips</h2>
+      </div>
+      <div id="content">
+				{% if thankyou %}
+					<center>Your message has been sent to the directors.<br />Thank you for your concern. <br /><br /><a href="/">&larr; Go back</a></center>
+				{% else %}
+				If you have a concern about Hacker Dojo or any person or group in the community, you can use this form to bring to the attention of the board of directors. As appropriate they will handle it directly or bring it to the attention of staff or members.
+				<p>
+				<form action="/" method="post">
+					<textarea name="body" style="width: 100%;" rows="12"></textarea>
+					<center><input type="submit" value="Submit Anonymously" style="font-size: larger;"></center>
+				</form>
+				</p>
+				<script type="text/javascript">
+					$('textarea:first').focus();
+				</script>
+				{% endif %}
+      </div>
+    </div>
+  </body>
+</html>
