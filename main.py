@@ -11,7 +11,7 @@ class MainHandler(webapp.RequestHandler):
         if message:
             mail.send_mail(
                 sender="Anonymous <no-reply@hackerdojo-anonymous.appspotmail.com>",
-                to="Directors <directors@hackerdojo.com>",
+                to="Staff <staff@hackerdojo.com>",
                 subject="An anonymous tip has been submitted",
                 body='%s\n\n---\n%s' % (message, self.request.remote_addr))
             thankyou = True
